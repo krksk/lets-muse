@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MUSE FOREVER</title>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
+<style type="text/css">
+	body {background:rgba(0,0,0,100); perspective: 300px;}
+	html{font-family: "Playfair Display SC", san-serif;}
+	#muse{display: block; position: relative; margin: auto; margin-top: 20%; width: 500px; height: 281px; z-index: 10;}
+	#muse2{display: block; position: absolute; left: 18%; top: -20%; width: 450px; height: 252px; z-index: 1;}
+	#muse3{display: block; position: absolute; left: 57%; top: -120%; width: 532px; height: 300px;}
+	#muse4{display: block; position: absolute; left: 38%; top: -100%; width: 532px; height: 300px;}
+	#muse5{display: block; position: absolute; left: 16%; top: 70%; width: 500px; height: 281px;}
+	#muse6{display: block; position: absolute; left: 15%; top: -110%; width: 540px; height: 304px; z-index: 0;}
+	#muse7{display: block; position: absolute; left: 57%; top: 75%; width: 540px; height: 304px; z-index: 0;}
+	#muse8{display: block; position: absolute; left: 36%; top: 80%; width: 500px; height: 250px; z-index: 0;}
+	#muse9{display: block; position: absolute; left: 57%; top: -15%; width: 500px; height: 250px; z-index: -1;}
+	#list{width: 900px; height: 120px; position: absolute; margin:auto; text-align: center; margin-top: 500px; font-size: 80px; margin-left: 30%; background: white;}
+	#plug{position: absolute; margin:auto; color: black; text-align: center; margin-top: 650px; font-size: 60px; margin-left: 41%; animation: twinkle 1s infinite; animation-play-state: paused; animation-direction: alternate; animation-iteration-count: 2;}
+	#stock{position: absolute; margin:auto; color: black; text-align: center; margin-top: 750px; font-size: 60px; margin-left: 33%; animation: twinkle 1s infinite; animation-play-state: paused; animation-direction: alternate; animation-iteration-count: 2;}
+	#panic{position: absolute; margin:auto; color: black; text-align: center; margin-top: 850px; font-size: 60px; margin-left: 40%; animation: twinkle 1s infinite; animation-play-state: paused; animation-direction: alternate; animation-iteration-count: 2;}
+	#hyst{position: absolute; margin:auto; color: black; text-align: center; margin-top: 950px; font-size: 60px; margin-left: 44%; animation: twinkle 1s infinite; animation-play-state: paused; animation-direction: alternate; animation-iteration-count: 2;}
+	#bliss{position: absolute; margin:auto; color: black; text-align: center; margin-top: 1050px; font-size: 60px; margin-left: 47%; animation: twinkle 1s infinite; animation-play-state: paused; animation-direction: alternate; animation-iteration-count: 2;}
+	#times{position: absolute; margin:auto; color: black; text-align: center; margin-top: 1150px; font-size: 60px; margin-left: 36%; animation: twinkle 1s infinite; animation-play-state: paused; animation-direction: alternate; animation-iteration-count: 2;}
+	#muscle{position: absolute; margin:auto; color: black; text-align: center; margin-top: 1250px; font-size: 60px; margin-left: 39.2%; animation: twinkle 1s infinite; animation-play-state: paused; animation-direction: alternate; animation-iteration-count: 2;}
+	#resis{position: absolute; margin:auto; color: black; text-align: center; margin-top: 1350px; font-size: 60px; margin-left: 43%; animation: twinkle 1s infinite; animation-play-state: paused; animation-direction: alternate; animation-iteration-count: 2;}
+	#fucking{position: absolute; margin:auto; color: black; text-align: center; margin-top: 1450px; font-size: 60px; margin-left: 30%; animation: twinkle 1s infinite; animation-play-state: paused; animation-direction: alternate; animation-iteration-count: 2;}
+	#back{width: 100%; height: 1200px; position: absolute; margin:auto;
+	margin-top: 600px; background: black; z-index: -2; transition: all 1s;}
+	#star{width: 1.5px; height: 1.5px; background: black; position: absolute; margin-top: -19%; animation-direction: alternate; animation: twinkle 10s alternate infinite;}
+	@keyframes go{
+			0%{}
+			100%{left:600px; top:1800px;}
+		}
+	@keyframes twinkle {
+			0% {
+    		opacity: 1;
+  			}
+  			100% {
+    		opacity: 0;
+  			}
+  	@keyframes gogo {
+    		 0%  {color:black;}
+    		100% {color:white;}
+			}
+</style>
+
+</head>
+<body>
+<img src = "original.gif" id="muse">
+<img src = "tenor.gif" id="muse2">
+<img src = "uprising.gif" id="muse3">
+<img src = "dof.gif" id="muse4">
+<img src = "resistance.gif" id="muse5">
+<img src = "mercy.gif" id="muse6">
+<img src = "matt.gif" id="muse7">
+<img src = "handler.gif" id="muse8">
+<img src = "giphy.gif" id="muse9">
+<div id="list">Fucking Good List</div>
+<div id="plug">Plug in baby</div>
+<div id="stock">Stockholm Syndrome</div>
+<div id="panic">Panic Station</div>
+<div id="hyst">Hysteria</div>
+<div id="bliss">Bliss</div>
+<div id="times">Time is running out</div>
+<div id="muscle">Muscle Museum</div>
+<div id="resis">Resistance</div>
+<div id="fucking">You fucking mother fucker</div>
+<div id="back"></div>
+<div id="star"></div>
+<audio id="testMusic">
+<script type="text/javascript">
+
+var toggle = "off"
+
+	for(var i=0; i<1000; i++){
+		var t = document.getElementById("star");
+		var k = t.cloneNode(true);
+		k.style.left = Math.random()*window.innerWidth+"px";
+		k.style.top = Math.random()*window.innerHeight+"px";
+		var time = Math.random();
+		k.style.animationDuration = time+"s"
+		k.style.background = makeColor();
+		document.body.appendChild(k);
+	}
+		function makeColor(){
+		var a = Math.ceil(Math.random()*255);
+		var b = Math.ceil(Math.random()*255);
+		var c = Math.ceil(Math.random()*255);
+		var text = "rgb("+ a +","+ b +","+ c +")";
+		return text;
+	}
+	window.onscroll = function(){
+		var t = document.documentElement.scrollTop;
+		if(t<600){
+			back.style.background = "black";
+			back.style.color = "black";
+		}else if(t<700){
+		back.style.background = "gray";
+		}else{
+		
+		}
+	}
+
+	muse.onmouseover = function(){
+            muse.style.cursor = "pointer";
+        }
+    muse.onclick = function(){
+    	window.scrollBy({ top: 1200, left: 0, behavior: 'smooth' });
+    }
+    plug.onmouseover = function(){
+            plug.style.cursor = "pointer";
+            plug.style.animationPlayState = "running";
+        }
+    stock.onmouseover = function(){
+            stock.style.cursor = "pointer";
+            stock.style.animationPlayState = "running";
+        }
+    panic.onmouseover = function(){
+            panic.style.cursor = "pointer";
+            panic.style.animationPlayState = "running";
+        }
+    hyst.onmouseover = function(){
+            hyst.style.cursor = "pointer";
+            hyst.style.animationPlayState = "running";
+        }
+    bliss.onmouseover = function(){
+            bliss.style.cursor = "pointer";
+            bliss.style.animationPlayState = "running";
+        }
+    times.onmouseover = function(){
+            times.style.cursor = "pointer";
+            times.style.animationPlayState = "running";
+        }
+    muscle.onmouseover = function(){
+            muscle.style.cursor = "pointer";
+            muscle.style.animationPlayState = "running";
+        }
+    resis.onmouseover = function(){
+            resis.style.cursor = "pointer";
+            resis.style.animationPlayState = "running";
+        }
+    fucking.onmouseover = function(){
+            fucking.style.cursor = "pointer";
+            fucking.style.animationPlayState = "running";
+        }
+    plug.onclick = function(){
+            if(toggle == "off"){
+            testMusic.setAttribute("src","dd.mp3")
+            toggle = "on";
+            testMusic.play();
+        	}
+            else {
+            toggle = "off";
+            testMusic.setAttribute("src","dd.mp3")
+            testMusic.paused();
+        	}
+        }
+    stock.onclick = function(){
+            if(toggle == "off"){
+            testMusic.setAttribute("src","st.mp3")
+            toggle = "on";
+            testMusic.play();
+        	}
+            else {
+            toggle = "off";
+            testMusic.setAttribute("src","st.mp3")
+            testMusic.paused();
+        	}
+        }
+    panic.onclick = function(){
+            if(toggle == "off"){
+            testMusic.setAttribute("src","pnc.mp3")
+            toggle = "on";
+            testMusic.play();
+        	}
+            else {
+            toggle = "off";
+            testMusic.setAttribute("src","pnc.mp3")
+            testMusic.paused();
+        	}
+        }
+    hyst.onclick = function(){
+            if(toggle == "off"){
+            testMusic.setAttribute("src","hst.mp3")
+            toggle = "on";
+            testMusic.play();
+        	}
+            else {
+            toggle = "off";
+            testMusic.setAttribute("src","hst.mp3")
+            testMusic.paused();
+        	}
+        }
+    bliss.onclick = function(){
+            if(toggle == "off"){
+            testMusic.setAttribute("src","bls.mp3")
+            toggle = "on";
+            testMusic.play();
+        	}
+            else {
+            toggle = "off";
+            testMusic.setAttribute("src","bls.mp3")
+            testMusic.paused();
+        	}
+        }
+    times.onclick = function(){
+            if(toggle == "off"){
+            testMusic.setAttribute("src","tms.mp3")
+            toggle = "on";
+            testMusic.play();
+        	}
+            else {
+            toggle = "off";
+            testMusic.setAttribute("src","tms.mp3")
+            testMusic.paused();
+        	}
+        }
+    muscle.onclick = function(){
+            if(toggle == "off"){
+            testMusic.setAttribute("src","msc.mp3")
+            toggle = "on";
+            testMusic.play();
+        	}
+            else {
+            toggle = "off";
+            testMusic.setAttribute("src","msc.mp3")
+            testMusic.paused();
+        	}
+        }
+    resis.onclick = function(){
+            if(toggle == "off"){
+            testMusic.setAttribute("src","rst.mp3")
+            toggle = "on";
+            testMusic.play();
+        	}
+            else {
+            toggle = "off";
+            testMusic.setAttribute("src","rst.mp3")
+            testMusic.paused();
+        	}
+        } 
+    fucking.onclick = function(){
+            if(toggle == "off"){
+            testMusic.setAttribute("src","fck.mp3")
+            toggle = "on";
+            testMusic.play();
+        	}
+            else {
+            toggle = "off";
+            testMusic.setAttribute("src","fck.mp3")
+            testMusic.paused();
+        	}
+        }                          
+</script>
+</body>
+</html>
